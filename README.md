@@ -12,4 +12,4 @@ Alternatively you can specifiy another path (or filename) in the attributes.
 
 ### default
 
-(Currently) the only recipe to install SNX
+(Currently) the only recipe to install SNX. It also starts the SNX service and creates the network interface (tunsnx). When the connection is disconnected you can restart it via `start_snx`
