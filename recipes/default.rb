@@ -29,14 +29,14 @@ bash 'install SNX' do
   creates '/usr/bin/snx'
 end
 
-template '/tmp/start_snx.sh' do 
-  source 'start_snx.sh.erb'
+template '/usr/local/bin/start_snx' do 
+  source 'start_snx.erb'
   mode 0755
   variables :snx_server => node[:checkpoint][:snx_server], :snx_user => node[:checkpoint][:snx_user], :snx_password => node[:checkpoint][:snx_password]
 end
 
 execute 'start snx' do 
   user 'root'
-  command '/tmp/start_snx.sh'
+  command '/usr/local/bin/start_snx'
   action :run
 end
