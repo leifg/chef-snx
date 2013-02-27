@@ -1,12 +1,12 @@
 #!/usr/bin/expect
 
 set timeout 10
-spawn snx -s <%= @snx_server %> -u <%= @snx_user %>
+spawn snx -s <%= @server %> -u <%= @user %>
 while {1} {
   expect {
  
     eof                             {break}
-    "Please enter your password:"   {send "<%= @snx_password %>\r"}
+    "Please enter your password:"   {send "<%= @password %>\r"}
     "Do you accept"                 {send "y\r"}
   }
 }
