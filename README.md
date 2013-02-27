@@ -8,8 +8,8 @@ As it is not possible to automatically download the binary for SSL Network Exten
 
 # Attributes
 
-  - `node[:snx][:checkpoint_install_source]` - folder where snx install file is stored
-  - `node[:snx][:checkpoint_install_filename]` - filename of snx install file
+  - `node[:snx][:install_source]` - folder where snx install file is stored
+  - `node[:snx][:install_filename]` - filename of snx install file
   - `node[:snx][:server]` - server to which to connect
   - `node[:snx][:user]` - user for snx endpoint
   - `node[:snx][:password]` - password for snx endpoint
